@@ -38,8 +38,6 @@
 
 /* ===== ESTILOS BASE ===== */
 body {
-  border: solid 1px red;
-  /* Borde para debug */
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   color: var(--color-text);
