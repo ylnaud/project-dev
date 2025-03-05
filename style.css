@@ -261,12 +261,38 @@ body {
 }
 
 /* Small Screen Adjustments */
-@media (max-width: 375px) {
+@media (max-width: 275px) {
   .container {
+    width: 100%;
+    /* Ocupa todo el ancho */
+    max-width: 100%;
+    /* Evita desbordamiento */
+    padding: 0.5rem;
+    /* Padding más pequeño */
+    margin: 0 auto;
+    /* Centrado */
+    box-sizing: border-box;
+    /* Incluye padding en el ancho */
+    overflow-x: hidden;
+    /* Oculta desbordamiento horizontal */
+  }
 
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
+  /* Ajusta imágenes para que no se salgan */
+  .gallery img,
+  .hero img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
 
+  /* Reduce tamaño de fuente */
+  body {
+    font-size: 14px;
+  }
+
+  /* Ajusta espaciado */
+  .nav a {
+    padding: 0.3rem 0.5rem;
   }
 }
 
