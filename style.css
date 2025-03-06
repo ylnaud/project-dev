@@ -1,12 +1,12 @@
 /* Variables Globales */
 :root {
-  --color-primary: #333;
-  --color-secondary: #555;
-  --color-accent: #777;
-  --color-light: #ababab;
-  --color-dark: #554c4c;
-  --color-text: #333;
-  --color-text-light: #fff;
+  --color-primary: #2c3e50;
+  --color-secondary: #34495e;
+  --color-accent: #419f5d;
+  --color-light: #ffffff;
+  --color-dark: #2c3e50;
+  --color-text: #2c3e50;
+  --color-text-light: #ffffff;
 
   --gap: 16px;
   --padding: 1rem;
@@ -14,7 +14,7 @@
   --border-radius: 8px;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   --font-family: Arial, Helvetica, sans-serif;
-  --font-size-base: 16px;
+  --font-size-base: clamp(14px, 2.5vw, 18px);
 }
 
 /* Reset */
@@ -26,6 +26,7 @@
 
 /* Tipografía y estructura */
 body {
+  scroll-behavior: smooth;
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   line-height: 1.5;
@@ -38,22 +39,28 @@ body {
 body.light-mode {
   background-color: var(--color-light);
   color: var(--color-text);
-
 }
 
 /* Modo Oscuro */
 body.dark-mode {
   background-color: var(--color-dark);
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 /* Enlaces */
 a {
   text-decoration: none;
   color: var(--color-text-light);
+  transition: color 0.3s;
 }
 
-/* UTILIDADES */
+a:hover {
+  color: var(--color-accent);
+
+
+}
+
+/* Flexbox Utilities */
 .flex {
   display: flex;
 }
@@ -68,13 +75,97 @@ a {
   flex-direction: column;
 }
 
-.flex-end {
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
   justify-content: flex-end;
 }
 
-.flex-start {
-  justify-content: flex-start;
+.justify-between {
+  justify-content: space-between;
 }
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap: 1rem;
+}
+
+.gap-3 {
+  gap: 1.5rem;
+}
+
+/* Grid Utilities */
+.grid {
+  display: grid;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.grid-columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-gap-1 {
+  gap: 0.5rem;
+}
+
+.grid-gap-2 {
+  gap: 1rem;
+}
+
+.grid-gap-3 {
+  gap: 1.5rem;
+}
+
+/* Resto de tu CSS... */
 
 /* CONTENEDOR PRINCIPAL */
 .container {
@@ -103,7 +194,6 @@ a {
   position: relative;
   z-index: 10;
   margin-top: 60px;
-  /* Ajusta este valor para que el header no sea cubierto por el nav */
 }
 
 /* NAVBAR */
@@ -114,10 +204,8 @@ a {
   top: 0;
   width: 100%;
   max-width: 1200px;
-  /* Mismo ancho que el footer y el contenedor principal */
   left: 50%;
   transform: translateX(-50%);
-  /* Centrar el nav */
   z-index: 1000;
   justify-content: space-between;
   align-items: center;
@@ -125,17 +213,18 @@ a {
   padding: var(--padding);
   box-shadow: var(--shadow);
 
-  /* Ajusta este valor para que el nav se superponga ligeramente sobre el header */
 }
 
 .nav a {
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   transition: background 0.3s;
+  color: var(--color-light);
 }
 
 .nav a:hover {
   background-color: var(--color-primary);
+  color: var(--color-text-light);
 }
 
 /* HERO */
@@ -170,7 +259,6 @@ a {
   grid-area: main;
   padding: var(--padding);
   background-color: var(--color-light);
-
 }
 
 /* PREGUNTAS FRECUENTES */
@@ -217,9 +305,7 @@ a {
   padding: var(--padding);
   width: 100%;
   max-width: 1200px;
-  /* Mismo ancho que el nav y el contenedor principal */
   margin: 0 auto;
-  /* Centrar el footer */
 }
 
 /* MENÚ MÓVIL */
