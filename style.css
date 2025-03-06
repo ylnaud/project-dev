@@ -3,8 +3,8 @@
   --color-primary: #333;
   --color-secondary: #555;
   --color-accent: #777;
-  --color-light: #f5f5f5;
-  --color-dark: #121212;
+  --color-light: #ababab;
+  --color-dark: #554c4c;
   --color-text: #333;
   --color-text-light: #fff;
 
@@ -38,6 +38,7 @@ body {
 body.light-mode {
   background-color: var(--color-light);
   color: var(--color-text);
+
 }
 
 /* Modo Oscuro */
@@ -169,6 +170,7 @@ a {
   grid-area: main;
   padding: var(--padding);
   background-color: var(--color-light);
+
 }
 
 /* PREGUNTAS FRECUENTES */
