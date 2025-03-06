@@ -5,35 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú con Toggle Animado</title>
-  <link rel="stylesheet" href="normalize.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- Barra de navegación -->
-  <nav class="nav">
-    <div class="flex-start">
-      <button class="menu-toggle" aria-label="Menu">
-        <div class="hamburger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </button>
-    </div>
+  <nav class="nav" role="navigation">
+    <!-- Botón de modo oscuro -->
+    <button class="dark-mode-toggle" aria-label="Cambiar modo">🌕</button>
 
-    <!-- Menú para escritorio -->
+    <!-- Menú de escritorio -->
     <div class="desktop-menu">
       <a href="#">Servicios</a>
       <a href="#">Blog</a>
       <a href="#">Contacto</a>
     </div>
 
-    <!-- Botón de modo oscuro -->
-    <div class="flex-end">
-      <button class="dark-mode-toggle" aria-label="Cambiar modo">🌕</button>
-    </div>
+    <!-- Botón del menú móvil -->
+    <button class="menu-toggle" aria-label="Menú">
+      <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
   </nav>
 
   <!-- Menú móvil -->
@@ -51,20 +46,20 @@
     </header>
 
     <div class="hero">
-      <img src="ban.jpg" alt="Hero Image">
+      <img src="ban.jpg" alt="Imagen principal">
       <div class="hero-text">
         <h2>Bienvenido a Mi Sitio</h2>
-        <p">Una experiencia web increíble</p>
+        <p>Una experiencia web increíble</p>
       </div>
     </div>
 
-    <main class="main flex-column  ">
+    <main class="main flex-column">
       <h2 class="color-1">Contenido Principal</h2>
       <p>Este es el contenido principal de la página.</p>
 
       <!-- Preguntas Frecuentes -->
       <h3 class="faq-title">Preguntas Frecuentes</h3>
-      <div class="faq-item ">
+      <div class="faq-item">
         <button class="faq-toggle">¿Cómo puedo contactarlos?</button>
         <div class="faq-content">
           Puedes contactarnos a través de nuestro formulario de contacto o por teléfono.
@@ -92,7 +87,7 @@
     </footer>
   </div>
 
-  <script type="module" src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
