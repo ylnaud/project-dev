@@ -4,106 +4,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nav Moderno</title>
-  <meta name="description" content="Diseño responsivo con CSS Grid y Flexbox" />
+  <title>Menú con Toggle Animado</title>
   <link rel="stylesheet" href="normalize.css" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="container">
-    <!-- Encabezado -->
-    <header class="header flex flex-center rounded shadow">
-      <h1>Mi Proyecto</h1>
-      <p>Un sitio web moderno y responsivo</p>
-    </header>
+  <!-- Barra de navegación -->
+  <nav class="nav">
+    <div class="flex-start">
+      <button class="menu-toggle" aria-label="Menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
 
-    <!-- Barra de navegación -->
-    <nav class="nav flex flex-center rounded shadow ">
-      <a href="#">Inicio</a>
+    <!-- Menú para escritorio -->
+    <div class="desktop-menu">
       <a href="#">Servicios</a>
       <a href="#">Blog</a>
       <a href="#">Contacto</a>
-    </nav>
+    </div>
 
-    <!-- Sección Hero -->
-    <div class="hero rounded shadow mt-1">
-      <img src="ban.jpg" alt="Descripción de la imagen">
+    <!-- Botón de modo oscuro -->
+    <div class="flex-end">
+      <button class="dark-mode-toggle" aria-label="Cambiar modo">🌕</button>
+    </div>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="menu-mobile">
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Blog</a>
+    <a href="#">Contacto</a>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="container">
+    <header class="header">
+      <h1 class="color-5">Mi Sitio Web</h1>
+    </header>
+
+    <div class="hero">
+      <img src="ban.jpg" alt="Hero Image">
       <div class="hero-text">
-        <h2>Bienvenido a mi sitio web</h2>
-        <p>Explora nuestros servicios y contenido exclusivo.</p>
+        <h2>Bienvenido a Mi Sitio</h2>
+        <p">Una experiencia web increíble</p>
       </div>
     </div>
 
-    <!-- Contenido principal -->
-    <main class="main rounded shadow mt-1">
-      <article>
-        <h2>Artículo Principal</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis
-          ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.
-        </p>
-        <p>
-          Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
-          Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
-        </p>
-        <h3>Subtítulo</h3>
-        <p>
-          Aenean velit eros, bibendum quis lacinia sed, vulputate vitae lorem. Praesent eget mi risus. Sed vitae elit a
-          libero tincidunt commodo.
-        </p>
-        <ul>
-          <li>Item de lista 1</li>
-          <li>Item de lista 2</li>
-          <li>Item de lista 3</li>
-        </ul>
-      </article>
+    <main class="main flex-column  ">
+      <h2 class="color-1">Contenido Principal</h2>
+      <p>Este es el contenido principal de la página.</p>
 
-      <!-- Más contenido -->
-      <section>
-        <h2>Más Información</h2>
-        <p>
-          Aquí puedes agregar más contenido relevante para tu sitio web. Por ejemplo, noticias, actualizaciones o
-          enlaces útiles.
-        </p>
-        <div class="gallery">
-          <img src="san-francisco-6950830_640.jpg" alt="Imagen de ejemplo 1">
-          <img src="bicycles-737190_640.jpg" alt="Imagen de ejemplo 2">
-          <img src="advertising-7671902_640.jpg" alt="Imagen de ejemplo 3">
+      <!-- Preguntas Frecuentes -->
+      <h3 class="faq-title">Preguntas Frecuentes</h3>
+      <div class="faq-item ">
+        <button class="faq-toggle">¿Cómo puedo contactarlos?</button>
+        <div class="faq-content">
+          Puedes contactarnos a través de nuestro formulario de contacto o por teléfono.
         </div>
-      </section>
+      </div>
+      <div class="faq-item">
+        <button class="faq-toggle">¿Cuáles son sus horarios?</button>
+        <div class="faq-content">
+          Estamos disponibles de lunes a viernes de 9:00 a 18:00.
+        </div>
+      </div>
     </main>
 
-    <!-- Barra lateral -->
-    <aside class="aside rounded shadow mt-1">
-      <h2>Artículos Relacionados</h2>
+    <aside class="aside">
+      <h3>Contenido Relacionado</h3>
       <div class="related-article">
-        <h3>Título del Artículo 1</h3>
-        <p>Breve descripción del artículo relacionado.</p>
-        <a href="#">Leer más</a>
-      </div>
-      <div class="related-article">
-        <h3>Título del Artículo 2</h3>
-        <p>Breve descripción del artículo relacionado.</p>
-        <a href="#">Leer más</a>
-      </div>
-      <div class="related-article">
-        <h3>Título del Artículo 3</h3>
-        <p>Breve descripción del artículo relacionado.</p>
+        <h4>Artículo 1</h4>
+        <p>Una breve descripción del artículo relacionado.</p>
         <a href="#">Leer más</a>
       </div>
     </aside>
 
-    <!-- Pie de página -->
-    <footer class="footer flex flex-center gap-1 rounded shadow mt-1">
-      <p>&copy; 2025 Mi Proyecto. Todos los derechos reservados. </p>
-      <nav class="flex flex-center gap-1">
-        <a href="#">Política de Privacidad </a> |
-        <a href="#">Términos y Condiciones </a> |
-        <a href="#">Contacto</a>
-      </nav>
+    <footer class="footer">
+      <p>© 2025 Mi Sitio Web. Todos los derechos reservados.</p>
     </footer>
   </div>
+
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
